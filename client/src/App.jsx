@@ -1,11 +1,10 @@
-import "./App.css";
+import Register from "./Register";
+import axios from "axios";
 
 function App() {
-  return (
-    <>
-      <div className="bg-red-500">test</div>
-    </>
-  );
+  axios.defaults.baseURL = "http://localhost:4000";
+  axios.defaults.withCredentials = true;
+  return <Register />;
 }
 
 export default App;
